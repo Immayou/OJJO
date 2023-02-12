@@ -17,11 +17,9 @@ export const HeroWrapper = styled.section`
   overflow: hidden;
   @media screen and (min-width: 768px) {
     min-height: 526px;
-    padding: 80px 0px 368px 0px;
     border-bottom-left-radius: 180px;
   }
   @media screen and (min-width: 1280px) {
-    padding: 308px 0px 98px 0px;
     border-bottom-left-radius: 110px;
   }
 `;
