@@ -25,17 +25,17 @@ export const Main = () => {
           alt="Logo"
           height={232}
         ></HeroLogoImgTablet>
-        <HeroLogoImgDesk
+        {/* <HeroLogoImgDesk
           src={require('../../images/TopLogoDesk.png')}
           alt="Logo"
           height={232}
-        ></HeroLogoImgDesk>
-        <HeroTitle
+        ></HeroLogoImgDesk> */}
+        {/* <HeroTitle
           src={require('../../images/HeroTitle_mob.png')}
           alt="Logo Kapusta"
           width={183}
           height={63}
-        ></HeroTitle>
+        ></HeroTitle> */}
       </HeroWrapper>
       <BottomWrapper>
         <HomeLogoImg

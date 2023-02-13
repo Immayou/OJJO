@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import QQ from '../../images/TopLogoTablet.png';
 
 export const Wrapper = styled.main`
   position: relative;
@@ -18,8 +19,20 @@ export const HeroWrapper = styled.section`
   @media screen and (min-width: 768px) {
     min-height: 526px;
     border-bottom-left-radius: 180px;
+    /* ::after {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url({QQ});
+      background-position: center;
+      background-repeat: repeat-x;
+      background-size: cover;
+    } */
   }
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 1200px) {
     border-bottom-left-radius: 110px;
   }
 `;
@@ -45,12 +58,13 @@ export const HeroLogoImgTablet = styled.img`
     left: 10px;
     width: 100%;
   }
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 1200px) {
     display: none;
   }
 `;
+
 export const HeroLogoImgDesk = styled.img`
-  @media screen and (max-width: 1279px) {
+  @media screen and (min-width: 1199px) {
     display: none;
   }
   @media screen and (min-width: 768px) {
@@ -72,7 +86,7 @@ export const HeroTitle = styled.img`
     width: 307px;
     height: 101px;
   }
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 1200px) {
     top: 308px;
     left: 229px;
   }
@@ -87,15 +101,14 @@ export const HomeLogoImg = styled.img`
   }
 `;
 export const HomeLogoBottomImgTabletDesk = styled.img`
+  position: absolute;
+  left: 103px;
+  bottom: 56px;
   @media screen and (max-width: 767px) {
     display: none;
   }
-  @media screen and (min-width: 768px) {
-    position: absolute;
-    left: 103px;
-    bottom: 56px;
-  }
-  @media screen and (min-width: 1280px) {
+
+  @media screen and (min-width: 1200px) {
     left: 230px;
     bottom: 50px;
   }
@@ -107,7 +120,7 @@ export const BottomWrapper = styled.div`
   @media screen and (min-width: 768px) {
     min-height: 442px;
   }
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 1200px) {
     min-height: 268px;
   }
 `;
