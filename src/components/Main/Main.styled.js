@@ -1,5 +1,8 @@
 import styled from '@emotion/styled';
-import QQ from '../../images/TopLogoTablet.png';
+import BCGimageTopTablet from '../../images/TopLogoTablet.png';
+import BCGimageTopDesk from '../../images/TopLogoDesk.png';
+import BCGimageBottomMob from '../../images/HeroImg_mob.png';
+import BCGimageBottom from '../../images/BottomLogo.png';
 
 export const Wrapper = styled.main`
   position: relative;
@@ -19,21 +22,31 @@ export const HeroWrapper = styled.section`
   @media screen and (min-width: 768px) {
     min-height: 526px;
     border-bottom-left-radius: 180px;
-    /* ::after {
+    ::after {
       position: absolute;
       content: '';
-      top: 0;
-      left: 0;
+      top: 28px;
+      left: 10px;
       width: 100%;
-      height: 100%;
-      background-image: url({QQ});
-      background-position: center;
-      background-repeat: repeat-x;
+      height: 40%;
+      background: url(${BCGimageTopTablet});
+      background-repeat: no-repeat;
       background-size: cover;
-    } */
+    }
   }
   @media screen and (min-width: 1200px) {
     border-bottom-left-radius: 110px;
+    ::after {
+      position: absolute;
+      content: '';
+      top: 28px;
+      left: 10px;
+      width: 100%;
+      height: 40%;
+      background: url(${BCGimageTopDesk});
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
   }
 `;
 
@@ -48,79 +61,58 @@ export const HeroLogoImg = styled.img`
   }
 `;
 
-export const HeroLogoImgTablet = styled.img`
-  @media screen and (max-width: 767px) {
-    display: none;
-  }
-  @media screen and (min-width: 768px) {
-    position: absolute;
-    top: 28px;
-    left: 10px;
-    width: 100%;
-  }
-  @media screen and (min-width: 1200px) {
-    display: none;
-  }
-`;
-
-export const HeroLogoImgDesk = styled.img`
-  @media screen and (min-width: 1199px) {
-    display: none;
-  }
-  @media screen and (min-width: 768px) {
-    position: absolute;
-    top: 28px;
-    left: 10px;
-    width: 100%;
-  }
-`;
-
 export const HeroTitle = styled.img`
   position: absolute;
   top: 86px;
   left: 20px;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 767px) {
     top: 80px;
     left: 72px;
     width: 307px;
     height: 101px;
   }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1199px) {
     top: 308px;
     left: 229px;
-  }
-`;
-
-export const HomeLogoImg = styled.img`
-  position: absolute;
-  bottom: 0;
-  left: 35px;
-  @media screen and (min-width: 768px) {
-    display: none;
-  }
-`;
-export const HomeLogoBottomImgTabletDesk = styled.img`
-  position: absolute;
-  left: 103px;
-  bottom: 56px;
-  @media screen and (max-width: 767px) {
-    display: none;
-  }
-
-  @media screen and (min-width: 1200px) {
-    left: 230px;
-    bottom: 50px;
   }
 `;
 
 export const BottomWrapper = styled.div`
   position: relative;
   min-height: 514px;
+  ::after {
+    position: absolute;
+    content: '';
+    bottom: 0px;
+    left: 35px;
+    width: 83px;
+    height: 89px;
+    background: url(${BCGimageBottomMob});
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
   @media screen and (min-width: 768px) {
     min-height: 442px;
+    ::after {
+      position: absolute;
+      content: '';
+      bottom: 56px;
+      left: 103px;
+      width: 183px;
+      height: 142px;
+      background: url(${BCGimageBottom});
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
   }
   @media screen and (min-width: 1200px) {
     min-height: 268px;
+    ::after {
+      position: absolute;
+      content: '';
+      bottom: 50px;
+      left: 230px;
+    }
   }
 `;
