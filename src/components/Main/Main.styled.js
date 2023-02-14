@@ -5,15 +5,6 @@ import BCGImageBottomMob from '../../images/HeroImg_mob.png';
 import BCGImageBottom from '../../images/BottomLogo.png';
 import BCGImageTopMob from '../../images/HeroImg_mob.png';
 
-export const Wrapper = styled.main`
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  min-height: 100vh;
-  margin: 0;
-`;
-
 export const HeroWrapper = styled.section`
   position: relative;
   min-height: 286px;
@@ -126,7 +117,7 @@ export const BottomWrapper = styled.div`
       background-size: contain;
     }
   }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1199px) {
     min-height: 268px;
     ::after {
       position: absolute;

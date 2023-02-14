@@ -1,7 +1,7 @@
+import { MainWrapper } from '../MainWrapper/MainWrapper';
 import {
   HeroWrapper,
   HeroTitle,
-  Wrapper,
   BottomWrapper,
   HeroTitleBox,
   HeroText,
@@ -9,7 +9,7 @@ import {
 
 export const Main = () => {
   return (
-    <Wrapper>
+    <MainWrapper>
       <HeroWrapper>
         <HeroTitleBox>
           <HeroTitle>Kapu$ta</HeroTitle>
@@ -17,6 +17,6 @@ export const Main = () => {
         </HeroTitleBox>
       </HeroWrapper>
       <BottomWrapper />
-    </Wrapper>
+    </MainWrapper>
   );
 };
