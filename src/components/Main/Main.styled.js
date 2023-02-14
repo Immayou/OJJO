@@ -15,7 +15,6 @@ export const Wrapper = styled.main`
 `;
 
 export const HeroWrapper = styled.section`
-  padding: 0 20px;
   position: relative;
   min-height: 286px;
   background-color: #f5f6fb;
@@ -32,7 +31,6 @@ export const HeroWrapper = styled.section`
     background: url(${BCGImageTopMob});
   }
   @media screen and (min-width: 768px) {
-    padding: 0 0 0 72px;
     min-height: 526px;
     border-bottom-left-radius: 180px;
     ::after {
@@ -45,7 +43,6 @@ export const HeroWrapper = styled.section`
     }
   }
   @media screen and (min-width: 1200px) {
-    padding: 0 0 0 229px;
     border-bottom-left-radius: 110px;
     ::after {
       background: url(${BCGImageTopDesk});
@@ -54,12 +51,17 @@ export const HeroWrapper = styled.section`
 `;
 
 export const HeroTitleBox = styled.div`
-  padding-top: 86px;
+  position: absolute;
+  z-index: 1000;
+  top: 86px;
+  left: 20px;
   @media screen and (min-width: 767px) {
-    padding-top: 80px;
+    top: 80px;
+    left: 171px;
   }
   @media screen and (min-width: 1199px) {
-    padding-top: 308px;
+    top: 308px;
+    left: 229px;
   }
 `;
 
@@ -73,7 +75,7 @@ export const HeroTitle = styled.h1`
   }
   @media screen and (min-width: 1199px) {
     font-size: 100px;
-    margin-bottom: 0px;
+    margin-bottom: 2px;
   }
 `;
 

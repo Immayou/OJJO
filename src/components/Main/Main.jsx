@@ -11,10 +11,10 @@ export const Main = () => {
   return (
     <Wrapper>
       <HeroWrapper>
-        {/* <HeroTitleBox>
+        <HeroTitleBox>
           <HeroTitle>Kapu$ta</HeroTitle>
           <HeroText>Smart finance</HeroText>
-        </HeroTitleBox> */}
+        </HeroTitleBox>
       </HeroWrapper>
       <BottomWrapper />
     </Wrapper>
