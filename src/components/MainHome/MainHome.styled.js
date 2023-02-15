@@ -4,16 +4,19 @@ import BCGImageBottom from '../../images/BottomLogo.png';
 
 export const TopWrapper = styled.section`
   position: relative;
+  padding: 0 20px;
   min-height: 258px;
   background-color: #f5f6fb;
   border-bottom-left-radius: 80px;
   overflow: hidden;
 
   @media screen and (min-width: 768px) {
+    padding: 0 32px;
     min-height: 526px;
     border-bottom-left-radius: 180px;
   }
   @media screen and (min-width: 1199px) {
+    padding: 0 91px;
     border-bottom-left-radius: 110px;
   }
 `;

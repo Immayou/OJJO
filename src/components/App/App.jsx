@@ -4,7 +4,8 @@ import { MainHome } from '../MainHome/MainHome';
 export const App = () => {
   return (
     <>
-      {/* <Main /> */}
+      {/* <Main/> */}
+
       <MainHome />
     </>
   );
