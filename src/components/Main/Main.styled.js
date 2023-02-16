@@ -26,14 +26,14 @@ export const HeroWrapper = styled.section`
     border-bottom-left-radius: 180px;
     ::after {
       top: 28px;
-      left: 10px;
+      left: 0px;
       width: 100%;
       height: 232px;
       background: url(${BCGImageTopTablet});
       background-repeat: repeat-x;
     }
   }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1199px) {
     border-bottom-left-radius: 110px;
     ::after {
       background: url(${BCGImageTopDesk});
@@ -91,7 +91,7 @@ export const HeroText = styled.p`
 
 export const BottomWrapper = styled.div`
   position: relative;
-  min-height: 514px;
+  height: 514px;
   ::after {
     position: absolute;
     content: '';
@@ -104,7 +104,7 @@ export const BottomWrapper = styled.div`
     background-size: contain;
   }
   @media screen and (min-width: 768px) {
-    min-height: 442px;
+    height: 442px;
     ::after {
       position: absolute;
       content: '';
@@ -118,7 +118,7 @@ export const BottomWrapper = styled.div`
     }
   }
   @media screen and (min-width: 1199px) {
-    min-height: 268px;
+    height: 268px;
     ::after {
       position: absolute;
       content: '';

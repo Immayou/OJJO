@@ -5,6 +5,7 @@ export const BoxWrapper = styled.main`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  width: 100%;
   min-height: 100vh;
   margin: 0;
 `;

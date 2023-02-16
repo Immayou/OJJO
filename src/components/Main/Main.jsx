@@ -16,6 +16,8 @@ export const Main = () => {
           <HeroText>Smart finance</HeroText>
         </HeroTitleBox>
       </HeroWrapper>
+      /сюди рендеримо форму логінізації і реєстрації, використовуючи position:
+      "absolute"/
       <BottomWrapper />
     </MainWrapper>
   );

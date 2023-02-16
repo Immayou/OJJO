@@ -4,27 +4,45 @@ import s from './MainHome.module.css';
 import MediaQuery from 'react-responsive';
 import imgText from '../../images/Kapusta.svg';
 
-const Container = ({ children }) => {
-  return (
-    <>
-      <MediaQuery maxWidth={767}>
-        <div className={s.container}>{children}</div>
-      </MediaQuery>
-      <MediaQuery minWidth={768} maxWidth={1279}>
-        <div className={s.containerTablet}>{children}</div>
-      </MediaQuery>
-      <MediaQuery minWidth={1280}>
-        <div className={s.containerDesktop}>{children}</div>
-      </MediaQuery>
-    </>
-  );
-};
-
 export const MainHome = () => {
   return (
     <MainWrapper>
-      <TopWrapper></TopWrapper>
+      <TopWrapper>{/* <Box></Box> */}</TopWrapper>
       <BottomWrapper></BottomWrapper>
     </MainWrapper>
   );
 };
+
+{
+  /* <div
+          style={{
+            width: '100%',
+            minHeight: '100hv',
+            position: 'absolute',
+            top: '0',
+            left: '0',
+            backgroundColor: 'transparent',
+          }}
+        > */
+}
+{
+  /* <div
+            style={{
+              width: '500px',
+              height: '500px',
+              backgroundColor: 'black',
+              marginBottom: '20px',
+            }}
+          ></div>
+          <div
+            style={{
+              width: '500px',
+              height: '500px',
+              backgroundColor: 'black',
+              marginBottom: '20px',
+            }}
+          ></div> */
+}
+{
+  /* </div> */
+}
