@@ -7,8 +7,34 @@ import imgText from '../../images/Kapusta.svg';
 export const MainHome = () => {
   return (
     <MainWrapper>
-      <TopWrapper>{/* <Box></Box> */}</TopWrapper>
-      <BottomWrapper></BottomWrapper>
+      <TopWrapper></TopWrapper>
+      <div
+        style={{
+          position: 'absolute',
+          top: '0',
+          left: '20%',
+          minHeight: '100vh',
+          backgroundColor: 'transparent',
+        }}
+      >
+        <div
+          style={{
+            width: '500px',
+            height: '500px',
+            backgroundColor: 'black',
+            marginBottom: '20px',
+          }}
+        ></div>
+        <div
+          style={{
+            width: '500px',
+            height: '500px',
+            backgroundColor: 'black',
+          }}
+        ></div>
+      </div>
+      {/* <Box></Box> */}
+      {/* <BottomWrapper></BottomWrapper> */}
     </MainWrapper>
   );
 };

@@ -22,16 +22,16 @@ export const TopWrapper = styled.section`
 
 export const BottomWrapper = styled.div`
   position: relative;
-  min-height: 215px;
+  height: 215px;
   @media screen and (min-width: 768px) {
-    min-height: 378px;
+    height: 378px;
     background-image: url(${BCGImageBottom});
     background-position: 85% 85%;
     background-repeat: no-repeat;
     background-size: 183px 146px;
   }
   @media screen and (min-width: 1199px) {
-    min-height: 268px;
+    height: 268px;
     background-image: url(${BCGImageTopTablet});
     background-position: 50% 140%;
     background-repeat: repeat-x;
@@ -39,22 +39,22 @@ export const BottomWrapper = styled.div`
   }
 `;
 
-// export const Box = styled.div`
-//   min-height: 258px;
-//   background-color: #f5f6fb;
-//   border-bottom-left-radius: 80px;
-//   overflow-y: visible;
+export const Box = styled.div`
+  min-height: 258px;
+  background-color: #f5f6fb;
+  border-bottom-left-radius: 80px;
+  overflow-y: visible;
 
-//   @media screen and (min-width: 768px) {
-//     padding: 0 32px;
-//     height: 526px;
-//     border-bottom-left-radius: 180px;
-//   }
-//   @media screen and (min-width: 1199px) {
-//     padding: 0 91px;
-//     border-bottom-left-radius: 110px;
-//   }
-// `;
+  @media screen and (min-width: 768px) {
+    padding: 0 32px;
+    height: 526px;
+    border-bottom-left-radius: 180px;
+  }
+  @media screen and (min-width: 1199px) {
+    padding: 0 91px;
+    border-bottom-left-radius: 110px;
+  }
+`;
 
 // export const TopWrapper = styled.section`
 //   position: relative;
