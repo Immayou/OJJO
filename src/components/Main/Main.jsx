@@ -5,9 +5,10 @@ import {
   BottomWrapper,
   HeroTitleBox,
   HeroText,
+  FormWrapper,
 } from './Main.styled';
 
-export const Main = () => {
+export const Main = ({ children }) => {
   return (
     <MainWrapper>
       <HeroWrapper>
@@ -16,8 +17,10 @@ export const Main = () => {
           <HeroText>Smart finance</HeroText>
         </HeroTitleBox>
       </HeroWrapper>
-      /сюди рендеримо форму логінізації і реєстрації, використовуючи position:
-      "absolute"/
+      <FormWrapper>
+        {children}
+        {/* сюди рендеримо форму логінізації і реєстрації */}
+      </FormWrapper>
       <BottomWrapper />
     </MainWrapper>
   );

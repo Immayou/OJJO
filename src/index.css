@@ -29,8 +29,11 @@ h6 {
   margin: 0;
 }
 
+ul,
+li,
 p {
   margin: 0;
+  padding: 0;
 }
 
 image {

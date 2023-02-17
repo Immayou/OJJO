@@ -33,11 +33,34 @@ export const HeroWrapper = styled.section`
       background-repeat: repeat-x;
     }
   }
-  @media screen and (min-width: 1199px) {
+  @media screen and (min-width: 1280px) {
     border-bottom-left-radius: 110px;
     ::after {
       background: url(${BCGImageTopDesk});
     }
+  }
+`;
+
+export const FormWrapper = styled.div`
+  position: absolute;
+  top: 199px;
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 280px;
+  min-height: 496px;
+  background-color: #000000;
+  border-radius: 30px;
+  z-index: 10;
+
+  @media screen and (min-width: 768px) {
+    top: 199px;
+    min-width: 426px;
+    min-height: 552px;
+  }
+  @media screen and (min-width: 1280px) {
+    top: 117px;
+    left: 60%;
+    transform: translateX(0);
   }
 `;
 
@@ -46,25 +69,27 @@ export const HeroTitleBox = styled.div`
   z-index: 1000;
   top: 86px;
   left: 20px;
-  @media screen and (min-width: 767px) {
+  @media screen and (min-width: 768px) {
     top: 80px;
     left: 171px;
   }
-  @media screen and (min-width: 1199px) {
+  @media screen and (min-width: 1280px) {
     top: 308px;
     left: 229px;
   }
 `;
 
 export const HeroTitle = styled.h1`
-  font-size: 46px;
+  font-family: 'Roboto', sans-serif;
+  font-style: 700px;
+  font-size: 50px;
   margin-bottom: 5px;
 
-  @media screen and (min-width: 767px) {
+  @media screen and (min-width: 768px) {
     font-size: 80px;
     margin-bottom: 4px;
   }
-  @media screen and (min-width: 1199px) {
+  @media screen and (min-width: 1280px) {
     font-size: 100px;
     margin-bottom: 2px;
   }
@@ -73,18 +98,18 @@ export const HeroTitle = styled.h1`
 export const HeroText = styled.p`
   padding-left: 11px;
   font-family: 'Roboto' sans-serif;
-  font-style: 700px;
+  font-style: bold;
   font-size: 13px;
   line-height: 1.15;
   letter-spacing: 15%;
   text-transform: uppercase;
-  @media screen and (min-width: 767px) {
+  @media screen and (min-width: 768px) {
     padding-left: 54px;
     font-size: 16px;
     line-height: 1.19;
     letter-spacing: 18%;
   }
-  @media screen and (min-width: 1199px) {
+  @media screen and (min-width: 1280px) {
     padding-left: 72px;
   }
 `;
@@ -117,7 +142,7 @@ export const BottomWrapper = styled.div`
       background-size: contain;
     }
   }
-  @media screen and (min-width: 1199px) {
+  @media screen and (min-width: 1280px) {
     height: 268px;
     ::after {
       position: absolute;
