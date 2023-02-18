@@ -20,12 +20,12 @@ import {
   BtnSecondary,
 } from './MainHome.styled';
 import { MainWrapper } from '../MainWrapper/MainWrapper';
-import { Field, Form, Formik, FormikProps } from 'formik';
+import { Formik } from 'formik';
 
 export const MainHome = () => {
   return (
     <MainWrapper>
-      <TopWrapper></TopWrapper>
+      <TopWrapper />
       <Box>
         <BackspaceVectorIcon />
         <FilterWrapper>

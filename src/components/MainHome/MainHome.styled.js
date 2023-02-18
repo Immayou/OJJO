@@ -6,7 +6,7 @@ import { ReactComponent as BackspaceIcon } from '../../images/KeyboardBackspace.
 import { Field, Form, Formik, FormikProps } from 'formik';
 import { ReactComponent as SelectVectorIcon } from '../../images/VectorIcon.svg';
 
-// main containers //
+// main container //
 
 export const TopWrapper = styled.section`
   position: relative;
@@ -287,13 +287,15 @@ export const BtnLink = styled.a`
   }
 `;
 
-// export const TopWrapper = styled.section`
+// export const TopBalanceWrapper = styled.section`
 //   position: relative;
 //   padding: 0 20px;
 //   min-height: 258px;
 //   background-color: #f5f6fb;
 //   border-bottom-left-radius: 80px;
 //   overflow: hidden;
+//   display: flex;
+//   justify-content: center;
 //   @media screen and (min-width: 768px) {
 //     padding: 0 32px;
 //     min-height: 526px;
