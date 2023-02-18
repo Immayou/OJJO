@@ -18,6 +18,7 @@ import {
   BtnSubmitItem,
   BtnSubmit,
   BtnSecondary,
+  TopBalanceWrapper,
 } from './MainHome.styled';
 import { MainWrapper } from '../MainWrapper/MainWrapper';
 import { Formik } from 'formik';
@@ -25,6 +26,13 @@ import { Formik } from 'formik';
 export const MainHome = () => {
   return (
     <MainWrapper>
+      {/* <TopBalanceWrapper> 
+
+        //тут рендеримо обгорнутий у дів баланс і рендеримо увесь компонент TopBalanceWrapper за необхідності// 
+
+      </TopBalanceWrapper> 
+       */}
+
       <TopWrapper />
       <Box>
         <BackspaceVectorIcon />
