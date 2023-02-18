@@ -13,7 +13,7 @@ import {
   FormInputWrapper,
   SecondaryInputWrapper,
   CalculatorIcon,
-  InputFieldSecondary,
+  TextSecondary,
   BtnSubmitList,
   BtnSubmitItem,
   BtnSubmit,
@@ -30,6 +30,9 @@ export const MainHome = () => {
         <BackspaceVectorIcon />
         <FilterWrapper>
           <Formik
+            onSubmit={values => {
+              console.log(values);
+            }}
             initialValues={{
               category: '',
               description: '',
@@ -47,8 +50,12 @@ export const MainHome = () => {
                   as="select"
                   name="category"
                   placeholder="Product category"
+                  label="Product category"
                 >
-                  <option value="" label="Product category"></option>
+                  <option
+                    label="Product category"
+                    placeholder="Product category"
+                  ></option>
                   <option value="transport">Transport</option>
                   <option value="products">Products</option>
                   <option value="health">Health</option>
@@ -65,12 +72,7 @@ export const MainHome = () => {
                 </SelectField>
               </FormInputWrapper>
               <SecondaryInputWrapper>
-                <InputFieldSecondary
-                  as="input"
-                  type="text"
-                  name="amount"
-                  placeholder="00.00 UAH"
-                />
+                <TextSecondary>00.00 UAH</TextSecondary>
                 <CalculatorIcon />
               </SecondaryInputWrapper>
               <BtnSubmitList>

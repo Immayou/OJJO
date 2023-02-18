@@ -105,13 +105,17 @@ export const InputField = styled(Field)`
     padding-left: 20px;
     color: #c7ccdc;
   }
+  transition: background-color 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  &:hover {
+    background-color: #ffffff;
+  }
 `;
 
 export const SelectField = styled(Field)`
   min-height: 44px;
   width: 100%;
   color: #c7ccdc;
-  padding: 2px 0 2px 20px;
+  padding: 10px 20px 10px 20px;
   border: none;
   border-top: 2px solid #ffffff;
   background-color: transparent;
@@ -120,8 +124,24 @@ export const SelectField = styled(Field)`
   font-size: 12px;
   line-height: 1.7;
   letter-spacing: 0.02em;
-  color: #c7ccdc;
+  border-bottom-right-radius: 12px;
   appearance: none;
+  outline: none;
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  &:hover {
+    background-color: #ffffff;
+  }
+
+  option {
+    padding: 10px 20px 10px 20px;
+    height: 33px;
+  }
+
+  option:checked {
+    color: #52555f;
+    background-color: #f5f6fb;
+  }
 `;
 
 // Secondary input
@@ -130,13 +150,13 @@ export const SecondaryInputWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 183px;
+  width: 183px;
   border-radius: 22px;
   border: 2px solid #ffffff;
   margin-bottom: 80px;
 `;
 
-export const InputFieldSecondary = styled(Field)`
+export const TextSecondary = styled.p`
   border: none;
   border-right: 2px solid #ffffff;
   background-color: transparent;
@@ -148,9 +168,6 @@ export const InputFieldSecondary = styled(Field)`
   line-height: 1.7;
   letter-spacing: 0.02em;
   color: #000000;
-  &::placeholder {
-    color: #000000;
-  }
 `;
 
 export const CalculatorIcon = styled(Calculator)`
@@ -244,8 +261,7 @@ export const BtnItem = styled.li`
   :not(:last-child) {
     margin-right: 2px;
   }
-  &:hover,
-  :current {
+  &:hover {
     background-color: #ff751d;
   }
 `;
@@ -263,9 +279,10 @@ export const BtnLink = styled.a`
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 2%;
-  transition: background-color 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
-  &:hover,
-  &:current {
+  transition: background-color 250ms cubic-bezier(0.075, 0.82, 0.165, 1),
+    color 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  &:hover {
+    background-color: #ff751d;
     color: #ffffff;
   }
 `;
