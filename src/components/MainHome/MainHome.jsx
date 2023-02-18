@@ -7,72 +7,83 @@ import {
   BtnWrapper,
   BackspaceVectorIcon,
   FilterWrapper,
-  SelectBox,
+  SelectField,
+  InputField,
+  FormBox,
+  FormInputWrapper,
+  SecondaryInputWrapper,
+  CalculatorIcon,
+  InputFieldSecondary,
+  BtnSubmitList,
+  BtnSubmitItem,
+  BtnSubmit,
+  BtnSecondary,
 } from './MainHome.styled';
 import { MainWrapper } from '../MainWrapper/MainWrapper';
-import list from '../../list.json';
-import { useState } from 'react';
-const styles = {
-  placeholder: defaultStyles => {
-    return {
-      ...defaultStyles,
-      fontFamily: 'Roboto, sans-serif',
-      fontStyle: 'Regular',
-      fontSize: '12px',
-      lineHeight: '1.17',
-      letterSpacing: '2%',
-    };
-  },
-};
+import { Field, Form, Formik, FormikProps } from 'formik';
 
 export const MainHome = () => {
-  // const { currentValue, setCurrentValue } = useState('');
-  // const getValue = () => {
-  //   return currentValue ? Array.from(
-  //   list.map(item => {
-  //     let result;
-  //     if (item.type === 'Категория товара') {
-  //       return (result = Object.assign({
-  //         value: item.name,
-  //         label: item.name,
-  //       }));
-  //     }
-  //     return result;
-  //   })
-  // );
-  // }
-  const filtredArray = Array.from(
-    list.map(item => {
-      let result;
-      if (item.type === 'Категория товара') {
-        return (result = Object.assign({
-          value: item.name,
-          label: item.name,
-        }));
-      }
-      return result;
-    })
-  );
-  const options = filtredArray.filter(item => item !== undefined);
   return (
     <MainWrapper>
-      <TopWrapper>
+      <TopWrapper></TopWrapper>
+      <Box>
         <BackspaceVectorIcon />
         <FilterWrapper>
-          <label htmlFor="selectCetegory">
-            <select id="selectCetegory" placeholder="Product category" required>
-              <option value="" disabled selected>
-                Product category...
-              </option>
-              <option value="grapefruit">Transport</option>
-              <option value="lime">Products</option>
-              <option value="coconut">Health</option>
-            </select>
-          </label>
-          <input type="submit" value="Отправить" />
+          <Formik
+            initialValues={{
+              category: '',
+              description: '',
+            }}
+          >
+            <FormBox>
+              <FormInputWrapper>
+                <InputField
+                  as="input"
+                  type="text"
+                  name="description"
+                  placeholder="Product description"
+                />
+                <SelectField
+                  as="select"
+                  name="category"
+                  placeholder="Product category"
+                >
+                  <option value="" label="Product category"></option>
+                  <option value="transport">Transport</option>
+                  <option value="products">Products</option>
+                  <option value="health">Health</option>
+                  <option value="alcohol">Alcohol</option>
+                  <option value="entertainment">Entertainment</option>
+                  <option value="housing">Housing</option>
+                  <option value="technique">Technique</option>
+                  <option value="communal, communication">
+                    Communal, communication
+                  </option>
+                  <option value="sports">Sports</option>
+                  <option value="hobbies">Hobbies</option>
+                  <option value="others">Others</option>
+                </SelectField>
+              </FormInputWrapper>
+              <SecondaryInputWrapper>
+                <InputFieldSecondary
+                  as="input"
+                  type="text"
+                  name="amount"
+                  placeholder="00.00 UAH"
+                />
+                <CalculatorIcon />
+              </SecondaryInputWrapper>
+              <BtnSubmitList>
+                <BtnSubmitItem>
+                  <BtnSubmit type="submit">Submit</BtnSubmit>
+                </BtnSubmitItem>
+                <BtnSubmitItem>
+                  <BtnSecondary type="button">Clear</BtnSecondary>
+                </BtnSubmitItem>
+              </BtnSubmitList>
+            </FormBox>
+          </Formik>
         </FilterWrapper>
-      </TopWrapper>
-      <Box>
         <BtnWrapper>
           <BtnList>
             <BtnItem>
