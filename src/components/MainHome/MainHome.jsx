@@ -21,7 +21,7 @@ import {
   TopBalanceWrapper,
 } from './MainHome.styled';
 import { MainWrapper } from '../MainWrapper/MainWrapper';
-import { Formik } from 'formik';
+import { TransactionForm } from '../TransactionForm/TransactionForm';
 
 export const MainHome = () => {
   return (
@@ -37,16 +37,17 @@ export const MainHome = () => {
       <Box>
         <BackspaceVectorIcon />
         <FilterWrapper>
-          <Formik
-            onSubmit={values => {
-              console.log(values);
-            }}
+          {/* <Formik
             initialValues={{
               category: '',
               description: '',
             }}
-          >
-            <FormBox>
+            onSubmit={values => {
+              console.log(values);
+            }}
+          > */}
+          <TransactionForm />
+          {/* <FormBox>
               <FormInputWrapper>
                 <InputField
                   as="input"
@@ -56,9 +57,10 @@ export const MainHome = () => {
                 />
                 <SelectField
                   as="select"
+                  values={Formik.initialValues}
                   name="category"
-                  placeholder="Product category"
-                  label="Product category"
+                  // placeholder="Product category"
+                  // label="Product category"
                 >
                   <option
                     label="Product category"
@@ -92,7 +94,7 @@ export const MainHome = () => {
                 </BtnSubmitItem>
               </BtnSubmitList>
             </FormBox>
-          </Formik>
+          </Formik> */}
         </FilterWrapper>
         <BtnWrapper>
           <BtnList>

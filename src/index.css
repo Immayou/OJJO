@@ -36,6 +36,12 @@ p {
   padding: 0;
 }
 
+input {
+  padding: 0;
+  border: none;
+  outline: none;
+}
+
 image {
   display: block;
   width: 100%;
@@ -47,4 +53,36 @@ button {
   padding: 0;
   border: none;
   outline: none;
+}
+
+.custom-select__control {
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: none !important;
+  border-bottom-right-radius: 12px !important;
+}
+
+.custom-select__value-container {
+  padding: 0 !important;
+  border: none !important;
+  border-radius: none !important;
+  /* border-color: blue !important; */
+}
+
+.custom-select__placeholder {
+  padding: 2px 0 2px 20px;
+  font-family: Roboto, sans-serif;
+  font-style: regular;
+  font-size: 12px;
+  line-height: 1.7;
+  letter-spacing: 0.02em;
+  color: #c7ccdc;
+}
+
+.custom-select__control--menu-is-open {
+  box-shadow: rgba(170, 178, 197, 0.4);
+  border: none !important;
+  border-radius: none !important;
+  /* border-color: blue !important; */
 }
