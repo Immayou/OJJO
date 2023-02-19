@@ -65,12 +65,8 @@ button {
   border-top-right-radius: 0px !important;
   border-top-left-radius: 0px !important;
   border-top: 2px solid #ffffff !important;
+  /* width: 100% !important; */
 }
-
-/* 
-.custom-select__input {
-  padding-left: 20px !important;
-} */
 
 input:-internal-autofill-selected {
   appearance: menulist-button;

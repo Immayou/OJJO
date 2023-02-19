@@ -8,6 +8,9 @@ export const FormBox = styled(Form)`
   justify-content: center;
   align-items: center;
   width: 100%;
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+  }
 `;
 
 export const FormInputWrapper = styled.div`
@@ -20,6 +23,16 @@ export const FormInputWrapper = styled.div`
   transition: background-color 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
   &:hover {
     background-color: #ffffff;
+  }
+  @media screen and (min-width: 768px) {
+    border-color: #f5f6fb;
+  }
+`;
+
+export const FlexBox = styled.div`
+  display: none;
+  @media screen and (min-width: 768px) {
+    display: flex;
   }
 `;
 
@@ -49,6 +62,9 @@ export const SecondaryInputWrapper = styled.div`
   border-radius: 22px;
   border: 2px solid #ffffff;
   margin-bottom: 80px;
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
 `;
 
 export const TextSecondary = styled.p`
@@ -74,11 +90,22 @@ export const CalculatorIcon = styled(Calculator)`
 
 // Buttons for Submit
 
+export const BtnSubmitTopList = styled.ul`
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100px;
+  height: 20px;
+`;
+
 export const BtnSubmitList = styled.ul`
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 280px;
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
 `;
 export const BtnSubmitItem = styled.li`
   display: flex;

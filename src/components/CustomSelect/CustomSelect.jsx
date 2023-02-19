@@ -1,6 +1,6 @@
 import Select from 'react-select';
 
-export function CustomSelect({ onChange, options, value }) {
+export function CustomSelect({ onChange, options, value, type }) {
   const defaultValue = (options, value) => {
     return options ? options.find(option => option.value === value) : '';
   };
@@ -8,12 +8,13 @@ export function CustomSelect({ onChange, options, value }) {
   return (
     <>
       <Select
-        // closeMenuOnSelect={true}
+        closeMenuOnSelect={true}
         classNamePrefix="custom-select"
         value={defaultValue(options, value)}
         onChange={value => onChange(value)}
         options={options}
-        placeholder="Product category"
+        placeholder={type}
+        required
       />
     </>
   );

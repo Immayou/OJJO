@@ -1,9 +1,0 @@
-.categoryForm {
-  width: 282px;
-  height: 60px;
-  display: inline-block;
-}
-.categoryFormSelect {
-  color: var(--placeholders-text-color);
-  border: none;
-}

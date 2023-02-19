@@ -1,11 +1,8 @@
 import styled from '@emotion/styled';
 import BCGImageTopTablet from '../../images/TopLogoTablet.png';
 import BCGImageBottom from '../../images/BottomLogo.png';
-import { ReactComponent as Calculator } from '../../images/Calculator.svg';
 import { ReactComponent as BackspaceIcon } from '../../images/KeyboardBackspace.svg';
-import { Field, Form, Formik, FormikProps } from 'formik';
 import Select from 'react-select';
-import { ReactComponent as SelectVectorIcon } from '../../images/VectorIcon.svg';
 
 // main container //
 
@@ -88,32 +85,19 @@ export const FilterWrapper = styled.div`
   top: 15%;
   left: 50%;
   transform: translateX(-50%);
-  max-width: 280px;
+  width: 280px;
   @media screen and (min-width: 768px) {
-    display: none;
-  }
-`;
-
-export const SelectField = styled(Select)`
-  min-height: 44px;
-  width: 100%;
-  color: #c7ccdc;
-  /* padding-left: 10px; */
-  border: none;
-  border-top: 2px solid #ffffff;
-  background-color: transparent;
-  font-family: Roboto, sans-serif;
-  font-style: regular;
-  font-size: 12px;
-  line-height: 1.7;
-  letter-spacing: 0.02em;
-  border-bottom-right-radius: 12px;
-  appearance: none;
-  outline: none;
-  cursor: pointer;
-  transition: background-color 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
-  &:hover {
-    background-color: #ffffff;
+    top: 184px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 704px;
+    background-color: #fff;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 0px;
+    box-shadow: 0px 10px 60px 0px rgba(170, 178, 197, 0.2);
+    padding: 24px 40px;
   }
 `;
 
