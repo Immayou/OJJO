@@ -8,7 +8,7 @@ export function CustomSelect({ onChange, options, value }) {
   return (
     <>
       <Select
-        closeMenuOnSelect={true}
+        // closeMenuOnSelect={true}
         classNamePrefix="custom-select"
         value={defaultValue(options, value)}
         onChange={value => onChange(value)}

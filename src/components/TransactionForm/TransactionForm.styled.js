@@ -17,14 +17,16 @@ export const FormInputWrapper = styled.div`
   border-top-left-radius: 12px;
   margin-bottom: 32px;
   width: 100%;
+  transition: background-color 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  &:hover {
+    background-color: #ffffff;
+  }
 `;
 
 export const InputField = styled(Field)`
-  width: 100%;
-  padding: 0;
-  min-height: 44px;
+  width: 280px - 20px;
+  padding: 10px 0px 10px 20px;
   border: none;
-  border-bottom: 2px solid #ffffff;
   background-color: transparent;
   font-family: Roboto, sans-serif;
   font-style: regular;
@@ -33,12 +35,7 @@ export const InputField = styled(Field)`
   letter-spacing: 0.02em;
   color: #c7ccdc;
   ::placeholder {
-    padding-left: 20px;
     color: #c7ccdc;
-  }
-  transition: background-color 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
-  &:hover {
-    background-color: #ffffff;
   }
 `;
 

@@ -63,16 +63,16 @@ export const TransactionForm = () => {
             onChange={formik.handleChange}
             values={formik.values.description}
           />
-          {formik.errors.description ? (
+          {/* {formik.errors.description ? (
             <div>{formik.errors.description}</div>
-          ) : null}
+          ) : null} */}
           <CustomSelect
             options={options}
             value={formik.values.category}
             placeholder="Product category"
             onChange={value => formik.setFieldValue('category', value.value)}
           ></CustomSelect>
-          {formik.errors.category ? <div>{formik.errors.category}</div> : null}
+          {/* {formik.errors.category ? <div>{formik.errors.category}</div> : null} */}
         </FormInputWrapper>
         <SecondaryInputWrapper>
           <TextSecondary>00.00 UAH</TextSecondary>
