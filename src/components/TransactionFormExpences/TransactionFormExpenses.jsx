@@ -12,6 +12,10 @@ import {
   BtnSubmit,
   BtnSecondary,
   InputsBox,
+  FormTopWrapper,
+  CalendarIcon,
+  CurrentData,
+  DataBox,
 } from './TransactionFormExpences.styled';
 
 const options = [
@@ -55,42 +59,50 @@ export const TransactionFormExpences = () => {
   return (
     <Formik>
       <FormBox onSubmit={formik.handleSubmit}>
-        <InputsBox>
-          <FormInputWrapper>
-            <InputField
-              as="input"
-              type="text"
-              id="description"
-              name="description"
-              placeholder="Product description"
-              onChange={formik.handleChange}
-              values={formik.values.description}
-              required
-            />
-            {/* {formik.errors.description ? (
+        <FormTopWrapper>
+          <DataBox>
+            <CalendarIcon />
+            <CurrentData>20.02.2023</CurrentData>
+          </DataBox>
+          <InputsBox>
+            <FormInputWrapper>
+              <InputField
+                as="input"
+                type="text"
+                id="description"
+                name="description"
+                placeholder="Product description"
+                onChange={formik.handleChange}
+                values={formik.values.description}
+                required
+              />
+              {/* {formik.errors.description ? (
             <div>{formik.errors.description}</div>
           ) : null} */}
-            <CustomSelect
-              options={options}
-              value={formik.values.category}
-              type="Product category"
-              onChange={value => formik.setFieldValue('category', value.value)}
-            ></CustomSelect>
-            {/* {formik.errors.category ? <div>{formik.errors.category}</div> : null} */}
-          </FormInputWrapper>
-          <SecondaryInputWrapper>
-            <TextSecondary
-              as="input"
-              type="text"
-              id="amount"
-              name="amount"
-              placeholder="00.00 UAH"
-              onChange={formik.handleChange}
-              values={formik.values.amount}
-            />
-            <CalculatorIcon />
-          </SecondaryInputWrapper>
-        </InputsBox>
+              <CustomSelect
+                options={options}
+                value={formik.values.category}
+                type="Product category"
+                onChange={value =>
+                  formik.setFieldValue('category', value.value)
+                }
+              ></CustomSelect>
+              {/* {formik.errors.category ? <div>{formik.errors.category}</div> : null} */}
+            </FormInputWrapper>
+            <SecondaryInputWrapper>
+              <TextSecondary
+                as="input"
+                type="text"
+                id="amount"
+                name="amount"
+                placeholder="00.00 UAH"
+                onChange={formik.handleChange}
+                values={formik.values.amount}
+              />
+              <CalculatorIcon />
+            </SecondaryInputWrapper>
+          </InputsBox>
+        </FormTopWrapper>
         <BtnSubmitList>
           <BtnSubmitItem>
             <BtnSubmit type="submit">Submit</BtnSubmit>

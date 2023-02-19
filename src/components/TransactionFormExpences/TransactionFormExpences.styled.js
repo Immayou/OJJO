@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import { ReactComponent as Calculator } from '../../images/Calculator.svg';
+import { ReactComponent as Calendar } from '../../images/Calendar.svg';
 import { Field, Form } from 'formik';
 
 export const FormBox = styled(Form)`
@@ -8,9 +9,22 @@ export const FormBox = styled(Form)`
   justify-content: center;
   align-items: center;
   width: 100%;
-  /* @media screen and (min-width: 768px) {
-    width: 480px;
-  } */
+  @media screen and (min-width: 1280px) {
+    flex-direction: row;
+  }
+`;
+
+export const FormTopWrapper = styled.div`
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 32px;
+  }
+  @media screen and (min-width: 1280px) {
+    margin-bottom: 0px;
+    margin-right: 32px;
+  }
 `;
 
 export const FormInputWrapper = styled.div`
@@ -19,11 +33,11 @@ export const FormInputWrapper = styled.div`
   border-top-right-radius: 12px;
   border-top-left-radius: 12px;
   margin-bottom: 32px;
-  width: 100%;
+  width: 280px;
   transition: background-color 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
   &:hover {
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
-      0px 4px 10px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+    /* box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+      0px 4px 10px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16); */
   }
   @media screen and (min-width: 768px) {
     display: flex;
@@ -31,7 +45,38 @@ export const FormInputWrapper = styled.div`
     align-items: center;
     margin-bottom: 0px;
     border: none;
-    width: 370px;
+    width: 100%;
+  }
+`;
+
+export const CalendarIcon = styled(Calendar)`
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  @media screen and (min-width: 1280px) {
+    margin-right: 14px;
+  }
+`;
+
+export const CurrentData = styled.p`
+  margin-right: 44px;
+  font-family: Roboto, sans-serif;
+  font-style: regular;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: #52555f;
+  @media screen and (min-width: 1280px) {
+    margin-right: 32px;
+  }
+`;
+
+export const DataBox = styled.div`
+  display: none;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 `;
 
@@ -56,8 +101,11 @@ export const InputsBox = styled.div`
 `;
 
 export const InputField = styled(Field)`
-  width: 280px - 20px;
-  padding: 10px 0px 10px 20px;
+  padding-left: 20px;
+  width: 260px;
+  height: 44px;
+  border-top-right-radius: 16px;
+  border-top-left-radius: 16px;
   border: none;
   background-color: transparent;
   font-family: Roboto, sans-serif;
@@ -66,12 +114,23 @@ export const InputField = styled(Field)`
   line-height: 1.7;
   letter-spacing: 0.02em;
   color: #52555f;
+  &:-internal-autofill-selected {
+    background-image: none !important;
+    background-color: #ffffff !important;
+  }
   ::placeholder {
     color: #c7ccdc;
   }
   @media screen and (min-width: 768px) {
-    width: 50%;
+    width: 164px;
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
     border-right: 2px solid #f5f6fb;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0),
+      inset 0 0 0 100px rgba(255, 255, 255, 1);
+  }
+  @media screen and (min-width: 1280px) {
+    width: 290px;
   }
 `;
 
@@ -96,31 +155,41 @@ export const SecondaryInputWrapper = styled.div`
 `;
 
 export const TextSecondary = styled(Field)`
+  width: 124px;
+  height: 44px;
   border: none;
   border-right: 2px solid #ffffff;
-  background-color: transparent;
-  width: 66.6666%;
-  padding: 12px 0 12px 25%;
+  border-top-left-radius: 22px;
+  border-bottom-left-radius: 22px;
+  /* padding: 12px 0 12px 28px; */
+  text-align: center;
   font-family: Roboto, sans-serif;
   font-style: regular;
   font-size: 12px;
   line-height: 1.7;
   letter-spacing: 0.02em;
   color: #000000;
+  &:-internal-autofill-selected {
+    background-image: none !important;
+    background-color: #f5f6fb !important;
+  }
   ::placeholder {
     font-family: 'Roboto', sans-serif;
     font-style: regular;
     font-size: 12px;
     line-height: 1.17;
     letter-spacing: 0.02em;
-    /* color: #000000; */
   }
   &:hover {
     /* color: #52555f; */
   }
   @media screen and (min-width: 768px) {
-    padding: 10px 0px 10px 20px;
-    border: none;
+    /* padding: 10px 0px 10px 20px; */
+    width: 73px;
+    border-left: 2px solid #f5f6fb;
+    border-radius: 0px;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0),
+      inset 0 0 0 100px rgba(255, 255, 255, 1);
   }
 `;
 
@@ -131,7 +200,11 @@ export const CalculatorIcon = styled(Calculator)`
   flex-shrink: 0;
   @media screen and (min-width: 768px) {
     margin-bottom: 0px;
-    padding: 10px;
+    padding: 10px 20px 10px 0;
+  }
+  @media screen and (min-width: 768px) {
+    margin-bottom: 0px;
+    padding: 10px 22px 10px 0;
   }
 `;
 
@@ -144,6 +217,9 @@ export const BtnSubmitList = styled.ul`
   width: 280px;
   @media screen and (min-width: 768px) {
     width: 265px;
+  }
+  @media screen and (min-width: 1280px) {
+    width: 100%;
   }
 `;
 
@@ -181,6 +257,9 @@ export const BtnSubmit = styled.button`
   @media screen and (min-width: 768px) {
     width: 125px;
   }
+  @media screen and (min-width: 768px) {
+    width: 136px;
+  }
 `;
 export const BtnSecondary = styled.button`
   background-color: transparent;
@@ -205,5 +284,8 @@ export const BtnSecondary = styled.button`
   }
   @media screen and (min-width: 768px) {
     width: 125px;
+  }
+  @media screen and (min-width: 768px) {
+    width: 136px;
   }
 `;

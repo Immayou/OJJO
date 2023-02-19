@@ -36,6 +36,16 @@ p {
   padding: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 input {
   padding: 0;
   border: none;
@@ -65,14 +75,24 @@ button {
   border-top-right-radius: 0px !important;
   border-top-left-radius: 0px !important;
   border-top: 2px solid #ffffff !important;
-  /* width: 100% !important; */
+  /* width: 185px !important; */
 }
 
-input:-internal-autofill-selected {
-  appearance: menulist-button;
-  background-color: transparent !important;
-  color: fieldtext !important;
+@media screen and (min-width: 1280px) {
+  .custom-select__control {
+    width: 169px;
+  }
 }
+
+/* input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px yellow inset;
+} */
+
+/* input:-internal-autofill-selected {
+  appearance: menulist-button;
+  background-image: none !important;
+  background-color: #f5f6fb !important;
+} */
 
 .custom-select__value-container {
   padding: 0 !important;

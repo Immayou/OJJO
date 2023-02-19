@@ -1,12 +1,12 @@
 import {
   TopWrapper,
   Box,
-  BtnList,
-  BtnLink,
-  BtnItem,
-  BtnWrapper,
+  BtnTopList,
   BackspaceVectorIcon,
   FilterWrapper,
+  ButtonLink,
+  ButtonNavLink,
+  ButtonTopList,
 } from './MainHome.styled';
 import { MainWrapper } from '../MainWrapper/MainWrapper';
 import { TransactionFormExpences } from '../TransactionFormExpences/TransactionFormExpenses';
@@ -15,31 +15,21 @@ import { TransactionFormIncome } from '../TransactionFormIncome/TransactionFormI
 export const MainHome = () => {
   return (
     <MainWrapper>
-      {/* <TopBalanceWrapper> 
-
-        //тут рендеримо обгорнутий у дів баланс і рендеримо увесь компонент TopBalanceWrapper за необхідності// 
-
-      </TopBalanceWrapper> 
-       */}
-
       <TopWrapper />
       <Box>
         <BackspaceVectorIcon />
-        {/* <BtnSubmitTopList /> */}
         <FilterWrapper>
+          <ButtonTopList>
+            <ButtonNavLink>
+              <ButtonLink>Expences</ButtonLink>
+            </ButtonNavLink>
+            <ButtonNavLink>
+              <ButtonLink>Income</ButtonLink>
+            </ButtonNavLink>
+          </ButtonTopList>
           <TransactionFormExpences />
           {/* <TransactionFormIncome /> */}
         </FilterWrapper>
-        <BtnWrapper>
-          <BtnList>
-            <BtnItem>
-              <BtnLink>Expenses</BtnLink>
-            </BtnItem>
-            <BtnItem>
-              <BtnLink>Income</BtnLink>
-            </BtnItem>
-          </BtnList>
-        </BtnWrapper>
       </Box>
     </MainWrapper>
   );
