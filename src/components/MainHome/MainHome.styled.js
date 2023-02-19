@@ -126,6 +126,7 @@ export const FilterWrapper = styled.div`
     left: 50%;
     transform: translateX(-50%);
     width: 704px;
+    box-sizing: border-box;
     padding: 24px 40px 42px 40px;
     background-color: #fff;
     border-bottom-left-radius: 30px;
@@ -198,6 +199,7 @@ export const BtnLink = styled.a`
   letter-spacing: 2%;
   transition: background-color 250ms cubic-bezier(0.075, 0.82, 0.165, 1),
     color 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
+
   &:hover {
     background-color: #ff751d;
     color: #ffffff;

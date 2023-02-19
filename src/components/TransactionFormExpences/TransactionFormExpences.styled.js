@@ -231,6 +231,11 @@ export const BtnSubmitItem = styled.li`
   border-radius: 16px;
   background-color: #f5f6fb;
   transition: background-color 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  @media screen and (min-width: 768px) {
+    :not(:last-child) {
+      margin-right: 15px;
+    }
+  }
 `;
 
 export const BtnSubmit = styled.button`

@@ -27,8 +27,8 @@ export const MainHome = () => {
               <ButtonLink>Income</ButtonLink>
             </ButtonNavLink>
           </ButtonTopList>
-          <TransactionFormExpences />
-          {/* <TransactionFormIncome /> */}
+          {/* <TransactionFormExpences /> */}
+          <TransactionFormIncome />
         </FilterWrapper>
       </Box>
     </MainWrapper>

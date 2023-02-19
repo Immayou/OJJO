@@ -105,7 +105,7 @@ export const TransactionFormExpences = () => {
         </FormTopWrapper>
         <BtnSubmitList>
           <BtnSubmitItem>
-            <BtnSubmit type="submit">Submit</BtnSubmit>
+            <BtnSubmit type="submit">Input</BtnSubmit>
           </BtnSubmitItem>
           <BtnSubmitItem>
             <BtnSecondary type="button">Clear</BtnSecondary>
