@@ -30,7 +30,7 @@ export const FormInputWrapper = styled.div`
     justify-content: space-between;
     align-items: center;
     margin-bottom: 0px;
-    border: 2px solid #f5f6fb;
+    border: none;
     width: 370px;
   }
 `;
@@ -42,10 +42,16 @@ export const InputsBox = styled.div`
   justify-content: center;
   width: 100%;
   @media screen and (min-width: 768px) {
+    width: auto;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    border: 2px solid #f5f6fb;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 16px;
   }
 `;
 
@@ -82,11 +88,10 @@ export const SecondaryInputWrapper = styled.div`
   @media screen and (min-width: 768px) {
     margin-bottom: 0px;
     width: 110px;
+    border: none;
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;
-    border-top-right-radius: 16px;
-    border-bottom-right-radius: 16px;
-    border: 2px solid #f5f6fb;
+    border-left: 2px solid #f5f6fb;
   }
 `;
 
@@ -102,18 +107,20 @@ export const TextSecondary = styled(Field)`
   line-height: 1.7;
   letter-spacing: 0.02em;
   color: #000000;
-  &:hover {
-    color: #52555f;
-  }
-  @media screen and (min-width: 768px) {
-    padding: 0px 8px 0px 10px;
-  }
   ::placeholder {
     font-family: 'Roboto', sans-serif;
     font-style: regular;
     font-size: 12px;
     line-height: 1.17;
     letter-spacing: 0.02em;
+    /* color: #000000; */
+  }
+  &:hover {
+    /* color: #52555f; */
+  }
+  @media screen and (min-width: 768px) {
+    padding: 10px 0px 10px 20px;
+    border: none;
   }
 `;
 
@@ -124,7 +131,7 @@ export const CalculatorIcon = styled(Calculator)`
   flex-shrink: 0;
   @media screen and (min-width: 768px) {
     margin-bottom: 0px;
-    padding: 5px 10px 5px;
+    padding: 10px;
   }
 `;
 
@@ -135,6 +142,9 @@ export const BtnSubmitList = styled.ul`
   align-items: center;
   justify-content: space-between;
   width: 280px;
+  @media screen and (min-width: 768px) {
+    width: 265px;
+  }
 `;
 
 export const BtnSubmitItem = styled.li`
@@ -146,12 +156,16 @@ export const BtnSubmitItem = styled.li`
   background-color: #f5f6fb;
   transition: background-color 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
 `;
+
 export const BtnSubmit = styled.button`
   background-color: transparent;
   text-transform: uppercase;
   color: #52555f;
   width: 130px;
-  height: 44px;
+  /* height: 44px; */
+  padding-top: 15px;
+  padding-bottom: 15px;
+  box-shadow: 1px 2px 5px 0px rgba(170, 178, 197, 0.4);
   border-radius: 16px;
   font-family: Roboto, sans-serif;
   font-style: bold;
@@ -164,13 +178,19 @@ export const BtnSubmit = styled.button`
     background-color: #ff751d;
     color: #ffffff;
   }
+  @media screen and (min-width: 768px) {
+    width: 125px;
+  }
 `;
 export const BtnSecondary = styled.button`
   background-color: transparent;
   text-transform: uppercase;
   color: #52555f;
   width: 130px;
-  height: 44px;
+  /* height: 44px; */
+  padding-top: 15px;
+  padding-bottom: 15px;
+  box-shadow: 1px 2px 5px 0px rgba(170, 178, 197, 0.4);
   border-radius: 16px;
   font-family: Roboto, sans-serif;
   font-style: bold;
@@ -182,5 +202,8 @@ export const BtnSecondary = styled.button`
   &:hover {
     background-color: #ff751d;
     color: #ffffff;
+  }
+  @media screen and (min-width: 768px) {
+    width: 125px;
   }
 `;
