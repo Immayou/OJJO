@@ -1,36 +1,39 @@
 import {
   TopWrapper,
   Box,
-  BtnTopList,
   BackspaceVectorIcon,
   FilterWrapper,
   ButtonLink,
   ButtonNavLink,
   ButtonTopList,
+  TopBalanceWrapper,
+  BtnList,
+  BtnLink,
+  BtnItem,
+  BtnWrapper,
 } from './MainHome.styled';
 import { MainWrapper } from '../MainWrapper/MainWrapper';
-import { TransactionFormExpences } from '../TransactionFormExpences/TransactionFormExpenses';
-import { TransactionFormIncome } from '../TransactionFormIncome/TransactionFormIncome';
+import { ExpencesForm } from '../ExpencesForm/ExpencesForm';
+import { IncomeForm } from '../IncomeForm/IncomeForm';
+import { BottomBtnWrapper } from '../BottomBtnWrapper/BottomBtnWrapper';
+import { TopBtnWrapper } from '../TopButtonWrapper/TopBtnWrapper';
 
 export const MainHome = () => {
   return (
     <MainWrapper>
+      {/* <TopBalanceWrapper> 
+       //тут рендеримо обгорнутий у дів баланс //  
+       </TopBalanceWrapper>  */}
       <TopWrapper />
       <Box>
         <BackspaceVectorIcon />
         <FilterWrapper>
-          <ButtonTopList>
-            <ButtonNavLink>
-              <ButtonLink>Expences</ButtonLink>
-            </ButtonNavLink>
-            <ButtonNavLink>
-              <ButtonLink>Income</ButtonLink>
-            </ButtonNavLink>
-          </ButtonTopList>
-          {/* <TransactionFormExpences /> */}
-          <TransactionFormIncome />
+          <TopBtnWrapper />
+          <ExpencesForm />
+          {/* <IncomeForm /> */}
         </FilterWrapper>
       </Box>
+      <BottomBtnWrapper /> --//рендеримо тільки з балансом
     </MainWrapper>
   );
 };

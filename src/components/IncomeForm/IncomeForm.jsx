@@ -16,20 +16,11 @@ import {
   CalendarIcon,
   CurrentData,
   DataBox,
-} from './TransactionFormExpences.styled';
+} from './IncomeForm.styled';
 
 const options = [
-  { value: 'transport', label: 'Transport' },
-  { value: 'products', label: 'Products' },
-  { value: 'health', label: 'Health' },
-  { value: 'alcohol', label: 'Alcohol' },
-  { value: 'entertainment', label: 'Entertainment' },
-  { value: 'housing', label: 'Housing' },
-  { value: 'technique', label: 'Technique' },
-  { value: 'communal, communication', label: 'Communal, communication' },
-  { value: 'sports', label: 'Sports' },
-  { value: 'hobbies', label: 'Hobbies' },
-  { value: 'others', label: 'Others' },
+  { value: 'salary', label: 'Salary' },
+  { value: 'add income', label: 'Add income' },
 ];
 
 const validate = values => {
@@ -43,16 +34,16 @@ const validate = values => {
   return errors;
 };
 
-export const TransactionFormExpences = () => {
+export const TransactionFormIncome = () => {
   const formik = useFormik({
     initialValues: {
       category: '',
       description: '',
-      amount: '',
+      sum: '',
     },
     validate,
     onSubmit: value => {
-      console.log({ ...value, type: 'expenses' });
+      console.log({ ...value, transactionsType: 'income' });
     },
   });
 
@@ -71,7 +62,7 @@ export const TransactionFormExpences = () => {
                 type="text"
                 id="description"
                 name="description"
-                placeholder="Product description"
+                placeholder="Description"
                 onChange={formik.handleChange}
                 values={formik.values.description}
                 required
@@ -82,7 +73,7 @@ export const TransactionFormExpences = () => {
               <CustomSelect
                 options={options}
                 value={formik.values.category}
-                type="Product category"
+                type="Category"
                 onChange={value =>
                   formik.setFieldValue('category', value.value)
                 }
@@ -93,11 +84,11 @@ export const TransactionFormExpences = () => {
               <TextSecondary
                 as="input"
                 type="text"
-                id="amount"
-                name="amount"
+                id="sum"
+                name="sum"
                 placeholder="00.00 UAH"
                 onChange={formik.handleChange}
-                values={formik.values.amount}
+                values={formik.values.sum}
               />
               <CalculatorIcon />
             </SecondaryInputWrapper>
